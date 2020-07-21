@@ -60,7 +60,7 @@ struct Home : View {
                     }){
                         
                         HStack(spacing: 25){
-                            Image("catalouge")
+                            Image(systemName: "moon.fill")
                             .foregroundColor(self.index == 0 ? Color("Color1") : Color.white)
                             
                             Text("Dreams")
@@ -86,10 +86,10 @@ struct Home : View {
                     }){
                         
                         HStack(spacing: 25){
-                            Image("cart")
+                            Image(systemName: "gear")
                             .foregroundColor(self.index == 1 ? Color("Color1") : Color.white)
                             
-                            Text("Cart")
+                            Text("Settings")
                             .foregroundColor(self.index == 1 ? Color("Color1") : Color.white)
                         }
                         .padding(.vertical, 10)
@@ -98,55 +98,55 @@ struct Home : View {
                         .cornerRadius(10)
                     }
                     
-                    //Boton 2 del Menu
-                    Button(action: {
-                        
-                        self.index = 2
-                        
-                        //Animatin Views...
-                        withAnimation{
-                            self.show.toggle()
-                        }
-                        
-                    }){
-                        
-                        HStack(spacing: 25){
-                            Image("fav")
-                            .foregroundColor(self.index == 2 ? Color("Color1") : Color.white)
-                            
-                            Text("Favourites")
-                            .foregroundColor(self.index == 2 ? Color("Color1") : Color.white)
-                        }
-                        .padding(.vertical, 10)
-                        .padding(.horizontal)
-                        .background(self.index == 2 ? Color("Color1").opacity(0.2) : Color.clear)
-                        .cornerRadius(10)
-                    }
-                    
-                    //Boton 3 del Menu
-                    Button(action: {
-                        
-                        self.index = 3
-                        
-                        //Animatin Views...
-                        withAnimation{
-                            self.show.toggle()
-                        }
-                        
-                    }){
-                        
-                        HStack(spacing: 25){
-                            Image("orders")
-                            .foregroundColor(self.index == 3 ? Color("Color1") : Color.white)
-                            
-                            Text("Your orders")
-                            .foregroundColor(self.index == 3 ? Color("Color1") : Color.white)
-                        }
-                        .padding(.vertical, 10)
-                        .padding(.horizontal)
-                        .background(self.index == 3 ? Color("Color1").opacity(0.2) : Color.clear)
-                        .cornerRadius(10)
-                    }
+//                    //Boton 2 del Menu
+//                    Button(action: {
+//
+//                        self.index = 2
+//
+//                        //Animatin Views...
+//                        withAnimation{
+//                            self.show.toggle()
+//                        }
+//
+//                    }){
+//
+//                        HStack(spacing: 25){
+//                            Image("fav")
+//                            .foregroundColor(self.index == 2 ? Color("Color1") : Color.white)
+//
+//                            Text("Favourites")
+//                            .foregroundColor(self.index == 2 ? Color("Color1") : Color.white)
+//                        }
+//                        .padding(.vertical, 10)
+//                        .padding(.horizontal)
+//                        .background(self.index == 2 ? Color("Color1").opacity(0.2) : Color.clear)
+//                        .cornerRadius(10)
+//                    }
+//
+//                    //Boton 3 del Menu
+//                    Button(action: {
+//
+//                        self.index = 3
+//
+//                        //Animatin Views...
+//                        withAnimation{
+//                            self.show.toggle()
+//                        }
+//
+//                    }){
+//
+//                        HStack(spacing: 25){
+//                            Image("orders")
+//                            .foregroundColor(self.index == 3 ? Color("Color1") : Color.white)
+//
+//                            Text("Your orders")
+//                            .foregroundColor(self.index == 3 ? Color("Color1") : Color.white)
+//                        }
+//                        .padding(.vertical, 10)
+//                        .padding(.horizontal)
+//                        .background(self.index == 3 ? Color("Color1").opacity(0.2) : Color.clear)
+//                        .cornerRadius(10)
+//                    }
                     
                     Divider()
                         .frame(width:150, height: 1)
@@ -201,9 +201,10 @@ struct Home : View {
                     }
                     
                     //Cambiar el nombre basado en el Index
-                    Text(self.index == 0 ? "Dreams" :  self.index == 1 ? "Cart" : (self.index == 2 ? "Favourites" : "Orders"))
+                    Text(self.index == 0 ? "Dreams" :  self.index == 1 ? "Settings" : (self.index == 2 ? "Favourites" : "Orders"))
                         .font(.title)
                         .foregroundColor(Color.black.opacity(0.6))
+
                     
                     Spacer(minLength: 0)
                 }
@@ -217,7 +218,7 @@ struct Home : View {
                         if self.index == 0{
                             MainPage()
                         }else if self.index == 1{
-                            Cart()
+                            Settings()
                         }else if self.index == 2{
                             Fav()
                         }else{
@@ -258,6 +259,17 @@ struct MainPage : View {
     
 }
 
+//Favourites View
+struct Settings : View {
+    
+    var body: some View{
+        VStack{
+            Text("Settings")
+        }
+    }
+    
+}
+
 //Cart View
 struct Cart : View {
     
@@ -290,3 +302,4 @@ struct Fav : View {
     }
     
 }
+
