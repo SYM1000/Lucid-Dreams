@@ -10,7 +10,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Welcome to Lucid Dreams")
+        VStack {
+            Text("Welcome to Lucid Dreams")
+            Text("The app to be a lucid dreamer")
+        }
     }
 }
 
