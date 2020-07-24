@@ -308,7 +308,7 @@ struct Fav : View {
 struct Main : View{
     
     var body: some View{
-        Text("Hello World, lucid dreams loves you!")
+        Text("Hello World, lucid dreams loves you a lot!")
     }
 }
 
