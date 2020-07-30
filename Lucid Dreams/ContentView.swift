@@ -42,7 +42,7 @@ struct Home : View {
                         .foregroundColor(.white)
                         .padding(.top, 10)
                     
-                    Text("Santiago") //Nombre del usuario
+                    Text("Santiago Y") //Nombre del usuario
                         .fontWeight(.bold)
                         .font(.title)
                         .foregroundColor(.white)
